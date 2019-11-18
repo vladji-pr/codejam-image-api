@@ -11,58 +11,62 @@
 
 <body>
   <header>
-    <h1>CodeJam: image-api</h1>
+    <div class="out-warapper">
+      <h1>CodeJam: image-api</h1>
+    </div>
   </header>
-  <main>
-    <div class="control-panel-wrapper">
-      <nav class="tools-wrapper">
-        <ul>
-          <li class="bucket-tool"><i class="fas fa-fill-drip"></i>Fill bucket</li>
-          <li class="choose-tool"><i class="fas fa-eye-dropper"></i>Choose color</li>
-          <li class="pencil-tool"><i class="fas fa-pencil-alt"></i>Pencil</li>
-        </ul>
-      </nav>
-      <nav class="palette-wrapper">
-        <ul class="color-indicator">
-          <li class="fas fa-share">
-            <div class="color-view color-view_cur"><input type="color" value="#008800"></div>Current color
-          </li>
-          <li>
-            <div class="color-view color-view_prev"></div>Prev color
-          </li>
-        </ul>
-        <ul class="color-predefine">
-          <li>
-            <div class="color-view color-view_red"></div>red
-          </li>
-          <li>
-            <div class="color-view color-view_blue"></div>blue
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="interactive-block">
-      <div class="canvas-top-btn">
-        <div class="loader-control">
-          <button class="btn btn_load">Load</button>
-          <input class="request-field" type="text">
+  <div class="out-warapper">
+    <main>
+      <div class="control-panel-wrapper">
+        <nav class="tools-wrapper">
+          <ul>
+            <li class="bucket-tool"><i class="fas fa-fill-drip"></i>Fill bucket</li>
+            <li class="choose-tool"><i class="fas fa-eye-dropper"></i>Choose color</li>
+            <li class="pencil-tool"><i class="fas fa-pencil-alt"></i>Pencil</li>
+          </ul>
+        </nav>
+        <nav class="palette-wrapper">
+          <ul class="color-indicator">
+            <li class="fas fa-share">
+              <div class="color-view color-view_cur"><input type="color" value="#008800"></div>Current color
+            </li>
+            <li>
+              <div class="color-view color-view_prev"></div>Prev color
+            </li>
+          </ul>
+          <ul class="color-predefine">
+            <li>
+              <div class="color-view color-view_red"></div>red
+            </li>
+            <li>
+              <div class="color-view color-view_blue"></div>blue
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="interactive-block">
+        <div class="canvas-top-btn">
+          <div class="loader-control">
+            <button class="btn btn_load">Load</button>
+            <input class="request-field" type="text">
+          </div>
+          <button class="btn btn_grayscale">grayscale</button>
         </div>
-        <button class="btn btn_grayscale">grayscale</button>
-      </div>
-      <div class="canvas-wrapper">
-        <canvas class="display-canvas" width="512" height="512"></canvas>
-        <canvas class="draft-canvas"></canvas>
-      </div>
-      <div class="canvas-control">
-        <button class="btn btn_clear">Clear canvas</button>
-        <div class="canvas-sizes">
-          <button class="btn btn_size" data-size="128" data-pen="4">128px</button>
-          <button class="btn btn_size" data-size="256" data-pen="2">256px</button>
-          <button class="btn btn_size" data-size="512" data-pen="1">512px</button>
+        <div class="canvas-wrapper">
+          <canvas class="display-canvas" width="512" height="512"></canvas>
+          <canvas class="draft-canvas"></canvas>
+        </div>
+        <div class="canvas-control">
+          <button class="btn btn_clear">Clear canvas</button>
+          <div class="canvas-sizes">
+            <button class="btn btn_size" data-size="128" data-pen="4">128px</button>
+            <button class="btn btn_size" data-size="256" data-pen="2">256px</button>
+            <button class="btn btn_size" data-size="512" data-pen="1">512px</button>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
+  </div>
 </body>
 
 </html>

@@ -4,11 +4,15 @@
 }
 
 body {
-  max-width: 1200px;
   font-family: monospace;
   font-size: 16px;
   font-weight: 600;
   color: #505050;
+}
+
+.out-warapper {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 ul {
@@ -17,10 +21,10 @@ ul {
 
 h1 {
   color: #676767;
+  padding: 10px 0;
 }
 
 header {
-  padding: 10px 50px;
   border-bottom: 1px solid #ccc;
   -webkit-box-shadow: 0 0 5px #ccc;
           box-shadow: 0 0 5px #ccc;
@@ -30,7 +34,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 50px;
+  padding: 50px 0;
 }
 
 nav {
