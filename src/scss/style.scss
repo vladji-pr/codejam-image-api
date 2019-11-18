@@ -31,15 +31,29 @@ header {
 
 .header {
   display: flex;
+  height: 70px;
+  align-items: center;
   justify-content: space-between;
 
   .login {
-    margin: 10px;
     padding: 5px 10px;
     background: #fff;
     border: 1px solid #ccc;
     border-radius: 3px;
     cursor: pointer;
+  }
+
+  .user-info-wrap {
+    display: flex;
+    width: 150px;
+    padding: 5px 0;
+    justify-content: space-between;
+  }
+
+  .user-ava {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
   }
 }
 
