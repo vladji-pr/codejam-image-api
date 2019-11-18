@@ -12,7 +12,7 @@ export default function authentification() {
     const nameBlock = document.createElement('p');
     const avaBlock = document.createElement('img');
 
-    infoWrap.classList.add('infoWrap');
+    infoWrap.classList.add('user-info-wrap');
     avaBlock.classList.add('user-ava');
 
     nameBlock.innerHTML = `Hello, ${name}`;
@@ -33,7 +33,7 @@ export default function authentification() {
       });
     const userData = await resp.json();
     console.log('userData', userData);
-    const userName = userData.name;
+    const userName = userData.login;
     const userAva = userData.avatar_url;
 
     showInfo(userName, userAva);
