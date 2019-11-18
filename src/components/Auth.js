@@ -14,7 +14,7 @@ export default function authentification() {
         },
       });
     console.log('resp', resp);
-  }
+  };
 
   loginBtn.addEventListener('click', () => {
     const auth = new Netlify({});
