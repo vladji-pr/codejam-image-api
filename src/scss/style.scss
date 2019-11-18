@@ -43,9 +43,12 @@ header {
   }
 }
 
+.login-output {
+  padding: 20px 0;
+}
+
 main {
   display: flex;
-  padding: 50px 0;
   justify-content: space-between;
 }
 
@@ -169,7 +172,6 @@ nav {
 }
 
 .interactive-block {
-
   .canvas-top-btn {
     display: flex;
     justify-content: space-between;
