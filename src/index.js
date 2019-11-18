@@ -1,7 +1,7 @@
 import Canvas from './components/Canvas';
 import Storage from './components/Storage';
 import ImgLoader from './components/ImgLoader';
-// import CanvasSize from './components/CanvasSize';
+import authentification from './components/Auth';
 import './scss/style.css';
 
 const canvas = new Canvas();
@@ -12,5 +12,4 @@ start.logic();
 const imageApi = new ImgLoader(canvas);
 imageApi.logic();
 
-// const canvasControl = new CanvasSize();
-// canvasControl.logic();
+authentification();

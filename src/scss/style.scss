@@ -11,7 +11,7 @@ body {
 }
 
 .out-warapper {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -29,9 +29,24 @@ header {
   box-shadow: 0 0 5px #ccc;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  .login {
+    margin: 10px;
+    padding: 5px 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+}
+
 main {
   display: flex;
   padding: 50px 0;
+  justify-content: space-between;
 }
 
 nav {
@@ -154,7 +169,6 @@ nav {
 }
 
 .interactive-block {
-  margin: 0 auto;
 
   .canvas-top-btn {
     display: flex;

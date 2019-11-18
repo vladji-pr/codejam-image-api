@@ -80,6 +80,8 @@ export default class Canvas {
       const mainCanvas = () => {
         Canvas.clearCanvas();
         ctx.imageSmoothingEnabled = false;
+        ctx.webkitImageSmoothingEnabled = false;
+        ctx.mozImageSmoothingEnabled = false;
         ctx.drawImage(newImg, 0, 0, 512, 512);
       };
 
