@@ -14,6 +14,8 @@ export default function authentification() {
         },
       });
     console.log('resp', resp);
+    const userData = await resp.json();
+    console.log('userData', userData);
   };
 
   loginBtn.addEventListener('click', () => {
