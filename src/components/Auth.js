@@ -21,7 +21,7 @@ export default function authentification() {
 
     infoWrap.append(nameBlock, avaBlock);
     header.append(infoWrap);
-  }
+  };
 
   const request = async (dataToken) => {
     const resp = await fetch('https://api.github.com/user',
