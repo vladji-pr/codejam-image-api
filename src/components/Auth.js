@@ -46,9 +46,6 @@ export default function authentification() {
       if (err) {
         outputText.innerText = `Error Authenticating with GitHub: ${err}`;
       } else {
-        // outputText.innerText = `Authenticated with GitHub. Access Token: ${data.token}`;
-        console.log('data.token', data.token);
-        console.log('data', data);
         request(data.token);
       }
     });
