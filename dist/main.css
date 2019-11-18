@@ -11,7 +11,7 @@ body {
 }
 
 .out-warapper {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -30,11 +30,32 @@ header {
           box-shadow: 0 0 5px #ccc;
 }
 
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .login {
+  margin: 10px;
+  padding: 5px 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 50px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 nav {
@@ -86,6 +107,7 @@ nav li:hover {
   font-family: monospace;
   font-size: 16px;
   color: #505050;
+  cursor: default;
 }
 
 .palette-wrapper .fa-share::before {
@@ -119,6 +141,7 @@ nav li:hover {
   height: 20px;
   border: 0;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .palette-wrapper input[type="color"]::-webkit-color-swatch-wrapper {
@@ -164,10 +187,6 @@ nav li:hover {
   font-family: monospace;
   color: #fff;
   background-color: #59baff;
-}
-
-.interactive-block {
-  margin: 0 auto;
 }
 
 .interactive-block .canvas-top-btn {
