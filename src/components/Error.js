@@ -3,7 +3,7 @@ export default class ErrorHandler {
     this.errorPosition = document.querySelector('.loader-control');
   }
 
-  badAnswer(message) {
+  renderModal(message) {
     const div = document.createElement('div');
     const closeBtn = document.createElement('div');
     const text = document.createElement('p');

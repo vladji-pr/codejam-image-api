@@ -32,7 +32,6 @@ export default function authentification() {
         },
       });
     const userData = await resp.json();
-    console.log('userData', userData);
     const userName = userData.login;
     const userAva = userData.avatar_url;
 

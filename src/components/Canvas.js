@@ -4,10 +4,12 @@ export default class Canvas {
     this.draftCanvas = document.querySelector('.draft-canvas');
     this.sizesWrap = document.querySelector('.canvas-sizes');
     this.gayscaleBtn = document.querySelector('.btn_grayscale');
+    this.clear = document.querySelector('.btn_clear');
     this.listeners();
     this.tool = null;
     this.color = null;
     this.line = 1;
+    this.size = 512;
     this.startX = null;
     this.startY = null;
     this.imgSave = null;
@@ -27,6 +29,7 @@ export default class Canvas {
     this.sizesWrap.addEventListener('click', (e) => {
       if (e.target.classList.contains('btn_size')) {
         const resize = e.target.dataset.size;
+        this.size = resize;
         const ratio = e.target.dataset.pen;
         this.line = +ratio;
         if (this.imgSave) this.reDrawCanvas(resize);
@@ -36,6 +39,8 @@ export default class Canvas {
     this.gayscaleBtn.addEventListener('click', () => {
       if (this.imgSave) this.grayscaleConvert();
     });
+
+    this.clear.addEventListener('click', Canvas.clearCanvas);
   }
 
   grayscaleConvert() {
@@ -63,7 +68,6 @@ export default class Canvas {
 
     const tempCanvas = this.draftCanvas;
     const tempCtx = tempCanvas.getContext('2d');
-
     const resizeImage = new Image();
     resizeImage.src = this.imgSave;
 
@@ -103,9 +107,14 @@ export default class Canvas {
     const ctx = canvas.getContext('2d');
     const canvasSize = param;
 
+    let ratio = null;
     if (image.width > canvas.width || image.height > canvas.height) {
       const imgParam = (image.width > image.height) ? image.width : image.height;
-      const ratio = canvasSize / imgParam;
+      ratio = canvasSize / imgParam;
+      image.width *= ratio;
+      image.height *= ratio;
+    } else if (image.width < canvas.width && image.height < canvas.height) {
+      ratio = canvasSize / image.width;
       image.width *= ratio;
       image.height *= ratio;
     }
@@ -113,7 +122,10 @@ export default class Canvas {
     const startPointDrawWidth = (canvasSize - image.width) / 2;
     const startPointDrawHeight = (canvasSize - image.height) / 2;
     ctx.drawImage(image, startPointDrawWidth, startPointDrawHeight, image.width, image.height);
-    this.imgSave = this.canvasDraw.toDataURL();
+    this.imgSave = canvas.toDataURL();
+
+    const defaultSize = 512;
+    if (this.size !== defaultSize) this.reDrawCanvas(this.size);
   }
 
   getCoordinate(evt) {

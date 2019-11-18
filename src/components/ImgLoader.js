@@ -32,8 +32,10 @@ export default class ImgLoader {
           throw new Error('Unfortunately we didn\'t get correct answer from the server');
         }
       } catch (e) {
-        this.error.badAnswer(e.message);
+        this.error.renderModal(e.message);
       }
+    } else {
+      this.error.renderModal('Please, enter the city');
     }
   }
 

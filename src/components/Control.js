@@ -1,5 +1,3 @@
-import Canvas from './Canvas';
-
 export default class Control {
   constructor(canvas) {
     this.canvas = canvas;
@@ -12,7 +10,6 @@ export default class Control {
     this.colorPicker = document.querySelector('.choose-tool');
     this.currentColorElem = document.querySelector('.color-view_cur input');
     this.prevColorElem = document.querySelector('.color-view_prev');
-    this.clear = document.querySelector('.btn_clear');
     this.requestField = document.querySelector('.request-field');
     this.currentTool = this.pencil;
     this.currentColor = '#008800';
@@ -62,8 +59,6 @@ export default class Control {
     this.requestField.addEventListener('blur', () => {
       document.addEventListener('keydown', keyToggleTools);
     });
-
-    this.clear.addEventListener('click', Canvas.clearCanvas);
 
     document.addEventListener('selectstart', (evt) => {
       evt.preventDefault();
